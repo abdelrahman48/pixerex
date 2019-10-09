@@ -1,0 +1,60 @@
+/*
+Flaticon icon font: Flaticon
+Creation date: 09/10/2019 08:35
+*/
+
+@font-face {
+    font-family: "Flaticon";
+    src: url("../../webfonts/Flaticon.eot");
+    src: url("../../webfonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+    url("../../webfonts/Flaticon.woff2") format("woff2"),
+    url("../../webfonts/Flaticon.woff") format("woff"),
+    url("../../webfonts/Flaticon.ttf") format("truetype"),
+    url("../../webfonts/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "Flaticon";
+        src: url("../../webfonts/Flaticon.svg#Flaticon") format("svg");
+    }
+}
+
+.fi:before{
+    display: inline-block;
+    font-family: "Flaticon";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.flaticon-analytics:before {
+	content: "\e001";
+}
+.flaticon-pie-chart:before {
+	content: "\e002";
+}
+.flaticon-rocket:before {
+	content: "\e003";
+}
+.flaticon-google-plus:before {
+	content: "\e004";
+}
+.flaticon-twitter:before {
+	content: "\e005";
+}
+.flaticon-logo:before {
+	content: "\e006";
+}
+.flaticon-linkedin:before {
+	content: "\e007";
+}

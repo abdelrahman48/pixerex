@@ -1,0 +1,79 @@
+.clearfix {
+  clear: both;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  max-width: 540px;
+}
+
+.container {
+  max-width: 720px;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.container {
+  max-width: 1240px;
+}
+
+header {
+  height: 400px;
+  background-color: #666;
+  color: blue;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-family: 'Work Sans', Arial, sans-serif;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/*# sourceMappingURL=map/main.css.map */
