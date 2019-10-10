@@ -87,6 +87,12 @@ img.responsive
     color: $primaryColor
     margin-bottom: 20px
     line-height: 42px
+    @include maxLarge
+      font-size: 30px
+      line-height: 35px
+    @include maxMedium
+      font-size: 25px
+      line-height: 30px
   .view-more
     display: inline-block
     font-family: "caros-bold", sans-serif

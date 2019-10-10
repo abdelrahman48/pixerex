@@ -1,6 +1,10 @@
 // Start getting-started section
 .getting-started
   padding: 130px 0
+  @include maxMedium
+    text-align: center
+  @include maxSmall
+    padding: 60px 0
   .content
     h1
       font-family: "caros-bold", sans-serif
@@ -9,12 +13,19 @@
       line-height: 68px
       margin-bottom: 65px
       letter-spacing: -1.64px
+      @include maxLarge
+        font-size: 32px
+        line-height: 40px
     p
       font-family: "caros-webfont", sans-serif
       font-size: 19px
       color: $secondaryColor
       margin-bottom: 66px
       letter-spacing: -.6px
+      max-width: 432px
+      @include maxMedium
+        font-size: 16px
+        margin: auto auto 66px
     a
       font-family: "caros-bold", sans-serif
       background-color: $orangeColor
@@ -30,7 +41,6 @@
       &:after
         font-size: 10px
         margin-left: 6px
-
   .image
     background: url("../img/getting-started-768x535.png") no-repeat center/contain
     @include maxMedium
@@ -51,6 +61,10 @@
     color: $primaryColor
     margin-bottom: 30px
     line-height: 42px
+    @include maxMedium
+      font-size: 25px
+      line-height: 30px
+      margin-bottom: 10px
   .services
     padding: 26px 0
     .service
@@ -59,6 +73,8 @@
       box-shadow: 0 5px 15px 0 rgba(130,136,147,0.1)
       padding: 60px 40px
       margin: 0 15px
+      @include maxMedium
+        margin-bottom: 30px
       &:hover
         .yellow
           background-color: #ffdd6e
@@ -85,17 +101,17 @@
         background-color: #fff7df
         color: #ffdd6e
         &:after
-          content: "\f101"
+          content: "\f103"
       .navy
         background-color: #f8f1ff
         color: #9365d4
         &:after
-          content: "\f100"
+          content: "\f102"
       .orange
         background-color: #ffeee4
         color: #ff6d34
         &:after
-          content: "\f102"
+          content: "\f104"
       h4
         font-family: "caros-bold", sans-serif
         font-size: 18px
@@ -124,7 +140,15 @@
   padding: 150px 0 140px
   .image
     margin: 0 40px 0 80px
-    span
+    flex-shrink: 2
+    @include maxLarge
+      margin: 0 40px 0 40px
+      flex-shrink: 1
+    @include maxMedium
+      margin: 0 10px 30px 40px
+    @include maxSmall
+      margin: 0 10px 30px 30px
+    .square
       font-family: "caros-webfont", sans-serif
       font-size: 14px
       background-color: $orangeColor
@@ -135,11 +159,19 @@
       color: #fff
       top: -55px
       left: -65px
+      @include maxMedium
+        width: 50%
+        text-align: center
+        left: -40px
+      @include maxSmall
+        padding: 50px 20px
     img
-      width: 100%
       border-radius: 10px
       box-shadow: 0 15px 20px 0 rgba(130,136,147,0.15)
-
+      @include maxLarge
+        max-width: 100%
+      @include maxMedium
+        width: 100%
   h2
     font-family: "caros-webfont", sans-serif
     font-size: 16px
@@ -161,7 +193,7 @@
     color: $secondaryColor
     margin-bottom: 50px
   .progress
-    max-width: 475px
+    max-width: 95%
     margin-bottom: 59px
     .data
       margin-bottom: 4px
@@ -191,27 +223,43 @@
     margin-top: 88px
     span
       display: block
-    .number
-      font-family: "caros-bold", sans-serif
-      font-size: 48px
-      letter-spacing: -1.36px
-      color: $primaryColor
-    .title
-      font-family: "caros-webfont", sans-serif
-      font-size: 19px
-      letter-spacing: -0.06px
-      color: $secondaryColor
+    .info
+      @include maxMedium
+        margin-bottom: 20px
+      .number
+        font-family: "caros-bold", sans-serif
+        font-size: 48px
+        letter-spacing: -1.36px
+        color: $primaryColor
+        @include maxLarge
+          font-size: 38px
+      .title
+        font-family: "caros-webfont", sans-serif
+        font-size: 19px
+        letter-spacing: -0.06px
+        color: $secondaryColor
+        @include maxLarge
+          font-size: 15px
 // End about-us section
 // Start recent-works section
 .recent-works
   .circle-image
-    width: 1000px
-    height: 900px
-    border-radius: 50%
-    background-color: #FFF8E2
-    top: -50px
-    right: 20px
+    top: -2em
+    right: -25em
+    height: 65em
+    width: 70em
+    background: #ffdd6e
+    OPACITY: 0.2
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%
     z-index: -999
+    @include maxMedium
+      display: none
+  .text, .btn
+    @include maxMedium
+      float: none
+  .btn .view-more
+    @include maxMedium
+      margin-top: 0
   .work-slider
     padding: 40px 0
     .image

@@ -11,12 +11,12 @@ html(lang="en")
             article
                 // Start getting-started section
                 section.getting-started
-                    .container.flex
-                        .content.col-6
+                    .container.md-flex
+                        .content.col-md-6
                             h1 Search Engine Optimization & Marketing
                             p Share your challenge with our team and we'll work with you to deliver a revolutionary digital product.
                             a.flaticon.flaticon-arrow(href='#') Getting Started
-                        .image.col-6
+                        .image.col-md-6
                 // End getting-started section
                 // Start our-services section
                 section.our-services.text-center
@@ -38,7 +38,7 @@ html(lang="en")
                                 ]
 
                             each service in services
-                                .service.col-md-4
+                                .service
                                     .circle.flaticon.relative(class=service.bgColor)
                                     h4.title #{service.title}
                                     p.info #{service.info}
@@ -46,11 +46,13 @@ html(lang="en")
                 // End our-services section
                 // Start about-us section
                 section.about-us
-                    .container.md-flex
-                        .image.col-md-5.relative
+                    .container.md-flex.align-items-center
+                        .image.relative
                             span.square.absolute ABOUT US
-                            img(width="451" height="499" src="http://nanum.pixerex.com/demo3/wp-content/uploads/sites/12/2019/02/BeFunky-photo-1.jpg" class="attachment-large size-large" alt="" srcset="http://nanum.pixerex.com/demo3/wp-content/uploads/sites/12/2019/02/BeFunky-photo-1.jpg 451w, http://nanum.pixerex.com/demo3/wp-content/uploads/sites/12/2019/02/BeFunky-photo-1-271x300.jpg 271w" sizes="(max-width: 451px) 100vw, 451px")
-                        .content.col-md-6
+                            img.responsive(srcset="img/about-us-271x300.jpg 271w, img/about-us-451x499.jpg 451w" sizes="(max-width: 400px) 271w, 451w"
+                            src='img/about-us-451x499.jpg' alt='')
+
+                        .content.heading-titles
                             h2 Best Digital Agency In The World
                             h3 We're a dynamic team of Marketing Expert.
                             p We provide marketing services to startups and small businesses to looking for a partner of their digital media.
@@ -73,17 +75,17 @@ html(lang="en")
                                     span.float-right 70%
                                 .progressbar.relative
                                     span.absolute(data-progress="70")
-                    .container.counter.sm-flex
-                        .flex-one.text-center
+                    .container.counter.md-flex
+                        .info.flex-one.text-center
                             span.number 3420+
                             span.title Completed Projects
-                        .flex-one.text-center
+                        .info.flex-one.text-center
                             span.number 25
                             span.title Headquarters
-                        .flex-one.text-center
+                        .info.flex-one.text-center
                             span.number 325K
                             span.title Worldwide Users
-                        .flex-one.text-center
+                        .info.flex-one.text-center
                             span.number 89
                             span.title Award Winner
                 // End about-us section
@@ -91,10 +93,10 @@ html(lang="en")
                 section.recent-works.relative
                     .circle-image.absolute
                     .container.heading-titles.clearfix
-                        .float-left
+                        .text.float-left
                             h2 Recent Works
                             h3 We've done a lot's,#[br] let's check some
-                        .float-right
+                        .btn.float-right
                             a.view-more(href='') View More Works.
                     .work-slider
                         -
