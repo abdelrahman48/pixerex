@@ -201,11 +201,11 @@ html(lang="en")
                 section.latest-articles.relative
                     .circle-image.absolute
                     .container.heading-titles.clearfix
-                        .float-left
-                            h2 Latest Articles
+                        .text.float-left
+                            h2.title Latest Articles
                             h3 Check what#[br] happening inside
-                        .float-right
-                            a.view-more(href='') View More Works.
+                        .btn.float-right.text-center
+                            a.view-more(href='#') View More Works.
                     .container
                         .articles.md-flex
                             -
@@ -230,7 +230,7 @@ html(lang="en")
                                 }
                                 ]
                             each article in articles
-                                .article.col-md-4
+                                .article
                                     a.imglink(href='#')
                                         img.responsive(src="img/"+article.img alt=article.title)
                                     .content

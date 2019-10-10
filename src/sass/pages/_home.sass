@@ -459,24 +459,55 @@
 .latest-articles
   padding: 112px 0
   .circle-image
-    width: 940px
-    height: 900px
-    border-radius: 50%
-    background-color: #FFE9E1
-    top: 25px
-    left: 0
+    opacity: 0.15
+    top: 2em
+    left: -19em
+    height: 55em
+    width: 60em
+    background: #ff6d34
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%
     z-index: -999
+    @include maxLarge
+      left: -70%
+    @include maxMedium
+      display: none
+  .title
+    margin-bottom: 20px
+  h3
+    margin-bottom: 60px
+    @include maxMedium
+      margin-bottom: 20px
+  .text, .btn
+    @include maxMedium
+      float: none
+  .btn .view-more
+    @include maxMedium
+      margin-top: 0
+      margin-bottom: 5px
   .articles
-    margin-top: 40px
+    margin: 0 -15px
+    @include maxLarge
+      flex-wrap: wrap
     .article
       margin: 0 15px
       background-color: #fff
       box-shadow: 0 5px 15px 0 rgba(130,136,147,0.15)
+      @include maxLarge
+        max-width: calc(50% - 30px)
+        margin-bottom: 30px
+      @include maxMedium
+        max-width: 70%
+        margin-right: auto
+        margin-left: auto
+      @include maxSmall
+        max-width: 90%
       .imglink
         display: inline-block
         margin-bottom: 35px
       .content
         padding: 0 42px 40px
+        @include maxLarge
+          padding: 0 20px 30px
         h2
           font-family: "caros-bold", sans-serif
           font-size: 22px
@@ -484,6 +515,9 @@
           line-height: 26px
           letter-spacing: -0.44px
           margin-bottom: 21px
+          @include maxLarge
+            font-size: 16px
+            line-height: 20px
           a
             color: $primaryColor
             transition: all .2s ease-in-out
@@ -497,7 +531,7 @@
           margin-bottom: 40px
         span
           font-family: "caros-webfont", sans-serif
-          font-size: 13px
+          font-size: 14px
           line-height: 24px
           color: $secondaryColor
         .author
