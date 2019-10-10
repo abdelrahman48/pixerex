@@ -1,7 +1,7 @@
-/*
-Flaticon icon font: Flaticon
-Creation date: 09/10/2019 08:35
-*/
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 10/10/2019 12:05
+    */
 
 @font-face {
     font-family: "Flaticon";
@@ -22,7 +22,7 @@ Creation date: 09/10/2019 08:35
     }
 }
 
-.fi:before{
+.flaticon:after {
     display: inline-block;
     font-family: "Flaticon";
     font-style: normal;
@@ -36,25 +36,27 @@ Creation date: 09/10/2019 08:35
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
 }
-
-.flaticon-analytics:before {
-	content: "\e001";
+.flaticon-google-plus:after {
+	content: "\f100";
 }
-.flaticon-pie-chart:before {
-	content: "\e002";
+.flaticon-twitter:after {
+	content: "\f101";
 }
-.flaticon-rocket:before {
-	content: "\e003";
+.flaticon-analytics:after {
+	content: "\f102";
 }
-.flaticon-google-plus:before {
-	content: "\e004";
+.flaticon-pie-chart:after {
+	content: "\f103";
 }
-.flaticon-twitter:before {
-	content: "\e005";
+.flaticon-rocket:after {
+	content: "\f104";
 }
-.flaticon-logo:before {
-	content: "\e006";
+.flaticon-logo:after {
+	content: "\f105";
 }
-.flaticon-linkedin:before {
-	content: "\e007";
+.flaticon-linkedin:after {
+	content: "\f106";
+}
+.flaticon-arrow:after {
+	content: "\f107";
 }

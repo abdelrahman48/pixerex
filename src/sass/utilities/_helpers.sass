@@ -1,3 +1,27 @@
+@each $prefix, $size in (null: null, sm-: 576px, md-: 768px, lg-: 992px, xl-: 1200px)
+  @if $prefix == null
+    @for $i from 1 through 12
+      .col-#{$prefix}#{$i}
+        flex: 0 0 percentage($i / 12)
+        max-width: percentage($i / 12)
+    .#{$prefix}flex
+      display: flex
+    .#{$prefix}block
+      display: block
+    .#{$prefix}inline-block
+      display: inline-block
+  @else
+    @media (min-width: $size)
+      @for $i from 1 through 12
+        .col-#{$prefix}#{$i}
+          flex: 0 0 percentage($i / 12)
+          max-width: percentage($i / 12)
+      .#{$prefix}flex
+        display: flex
+      .#{$prefix}block
+        display: block
+      .#{$prefix}inline-block
+        display: inline-block
 .container
   max-width: 1170px
   padding-right: 15px
@@ -5,6 +29,73 @@
   margin-right: auto
   margin-left: auto
 
-.clearfix
+.flex-one
+  flex: 1
+
+.align-items-center
+  align-items: center
+
+.clearfix:after
+  content: "."
+  visibility: hidden
+  display: block
+  height: 0
   clear: both
+
+.text-left
+  text-align: left
+
+.text-right
+  text-align: right
+
+.float-right
+  float: right
+
+.float-left
+  float: left
+
+.text-center
+  text-align: center
+
+.relative
+  position: relative
+
+.absolute
+  position: absolute
+
+.fixed
+  position: fixed
+
+.middle
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+img.responsive
+  max-width: 100%
+
+.heading-titles
+  h2
+    font-family: "caros-webfont", sans-serif
+    font-size: 16px
+    font-weight: 400
+    color: $orangeColor
+    margin-bottom: 18px
+  h3
+    font-family: "caros-bold", sans-serif
+    font-size: 36px
+    color: $primaryColor
+    margin-bottom: 20px
+    line-height: 42px
+  .view-more
+    display: inline-block
+    font-family: "caros-bold", sans-serif
+    font-size: 15px
+    font-weight: 400
+    color: $orangeColor
+    margin-top: 80px
+    transition: all .2s ease-in-out
+    cursor: pointer
+    &:hover
+      color: $primaryColor
 

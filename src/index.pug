@@ -3,12 +3,248 @@ doctype
 html(lang="en")
     include pug/head
     body
+        // Start Footer
         include pug/header
+        // End Footer
         // Start main
         main
             article
+                // Start getting-started section
                 section.getting-started
+                    .container.flex
+                        .content.col-6
+                            h1 Search Engine Optimization & Marketing
+                            p Share your challenge with our team and we'll work with you to deliver a revolutionary digital product.
+                            a.flaticon.flaticon-arrow(href='#') Getting Started
+                        .image.col-6
+                // End getting-started section
+                // Start our-services section
+                section.our-services.text-center
+                    .container
+                        h2 OUR SERVICES
+                        h3 The Best Online Marketing and #[br] Seo Services
+                        .services.md-flex.text-left
+                            -
+                                var services = [{
+                                bgColor: 'yellow',
+                                title:'Strategy & Research.',
+                                info:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'}, {
+                                bgColor: 'navy',
+                                title:'Reports & Analytics.',
+                                info:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'}, {
+                                bgColor: 'orange',
+                                title:'Managment & Marketing.',
+                                info:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'}
+                                ]
+
+                            each service in services
+                                .service.col-md-4
+                                    .circle.flaticon.relative(class=service.bgColor)
+                                    h4.title #{service.title}
+                                    p.info #{service.info}
+                                    a.link(href='#') More about #{service.title}
+                // End our-services section
+                // Start about-us section
+                section.about-us
+                    .container.md-flex
+                        .image.col-md-5.relative
+                            span.square.absolute ABOUT US
+                            img(width="451" height="499" src="http://nanum.pixerex.com/demo3/wp-content/uploads/sites/12/2019/02/BeFunky-photo-1.jpg" class="attachment-large size-large" alt="" srcset="http://nanum.pixerex.com/demo3/wp-content/uploads/sites/12/2019/02/BeFunky-photo-1.jpg 451w, http://nanum.pixerex.com/demo3/wp-content/uploads/sites/12/2019/02/BeFunky-photo-1-271x300.jpg 271w" sizes="(max-width: 451px) 100vw, 451px")
+                        .content.col-md-6
+                            h2 Best Digital Agency In The World
+                            h3 We're a dynamic team of Marketing Expert.
+                            p We provide marketing services to startups and small businesses to looking for a partner of their digital media.
+
+                            .progress
+                                .data.clearfix
+                                    span SEO
+                                    span.float-right 50%
+                                .progressbar.relative
+                                    span.absolute(data-progress="50")
+                            .progress
+                                .data
+                                    span MARKETING
+                                    span.float-right 90%
+                                .progressbar.relative
+                                    span.absolute(data-progress="90")
+                            .progress
+                                .data
+                                    span DESIGN
+                                    span.float-right 70%
+                                .progressbar.relative
+                                    span.absolute(data-progress="70")
+                    .container.counter.sm-flex
+                        .flex-one.text-center
+                            span.number 3420+
+                            span.title Completed Projects
+                        .flex-one.text-center
+                            span.number 25
+                            span.title Headquarters
+                        .flex-one.text-center
+                            span.number 325K
+                            span.title Worldwide Users
+                        .flex-one.text-center
+                            span.number 89
+                            span.title Award Winner
+                // End about-us section
+                // Start recent-works section
+                section.recent-works.relative
+                    .circle-image.absolute
+                    .container.heading-titles.clearfix
+                        .float-left
+                            h2 Recent Works
+                            h3 We've done a lot's,#[br] let's check some
+                        .float-right
+                            a.view-more(href='') View More Works.
+                    .work-slider
+                        -
+                            var images = [
+                                {url: 'slider1'},{url: 'slider2'},
+                                {url: 'slider3'},{url: 'slider4'},
+                                {url: 'slider5'},{url: 'slider6'}
+                            ]
+                        each image in images
+                            .image(data-image=image.url)
+                // End recent-works section
+                // Start testimonials section
+                section.testimonials
+                    .container.text-center
+                        h2 Testimonials
+                        h3 Real customers testimonials
+                        .testimonial-slider
+                            -
+                                var testimonial = "I had some bad situations in the past so I was eager to try Nanum. I can confidently say that Nanum saved me hundreds of dollars so far I can confidently say that Nanum saved me hundreds of dollars so far."
+                                var testimonials = [{
+                                name: 'Melissa Doe',
+                                job: 'Instagramer',
+                                img: 'img/face-3.jpg',
+                                testimonial: testimonial
+                                },
+                                {
+                                name: 'Katty Liore',
+                                job: 'Youtuber',
+                                img: 'img/face-2.jpg',
+                                testimonial: testimonial
+                                },
+                                {
+                                name: 'Adam Brown',
+                                job: 'CEO Figma',
+                                img: 'img/face-1.jpg',
+                                testimonial: testimonial
+                                },
+                                {
+                                name: 'Melina Makayen',
+                                job: 'Graphic Designer',
+                                img: 'img/face-5.jpg',
+                                testimonial: testimonial
+                                },
+                                {
+                                name: 'Sara Gomez',
+                                job: 'Web Designer',
+                                img: 'img/face-4.jpg',
+                                testimonial: testimonial
+                                }
+                                ]
+                            each testimonial in testimonials
+                                .testimonial
+                                    p #{testimonial.testimonial}
+                                    img(src=testimonial.img alt=testimonial.name)
+                                    div.info.relative
+                                        span.name #{testimonial.name}
+                                        span.job #{testimonial.job}
+                // End testimonials section
+                // Start pricing-table section
+                section.pricing-table
+                    .container.text-center
+                        h2 Pricing Table
+                        h3 Not any hidden charges, choose your plan
+                        h4 We Have Different Pricing Types To Choose
+                        .md-flex.clearfix.align-items-center
+                            -
+                                var prices = [{
+                                price: '49',
+                                package: 'Weekly Package',
+                                title: 'Startup',
+                                features: ['Business & Finance Analysing', 'SEO Optimization', 'Managment & Marketing', '24/7 Customer Support'],
+                                cta: 'Sing up'
+                                },
+                                {
+                                class: 'special',
+                                price: '79',
+                                package: 'Monthly Package',
+                                title: 'Professional',
+                                features: ['Strategy & Research', 'Business & Finance Analysing', 'SEO Optimization', 'Managment & Marketing', 'Website Design & Development', '24/7 Customer Support'],
+                                cta: 'Sing up'
+                                },
+                                {
+                                price: '99',
+                                package: 'Weekly Package',
+                                title: 'Entreprise',
+                                features: ['Business & Finance Analysing', 'SEO Optimization', 'Managment & Marketing', '24/7 Customer Support'],
+                                cta: 'Get a quote'
+                                }
+                                ]
+                            each price in prices
+                                .price-table.col-md-4(class=price.class)
+                                    .price.relative #{price.price}
+                                    span #{price.package}
+                                    span.title #{price.title}
+                                    .features
+                                        each val in price.features
+                                            span #{val}
+                                    a(href='#') #{price.cta}
+
+                // End pricing-table section
+                // Start latest-articles section
+                section.latest-articles.relative
+                    .circle-image.absolute
+                    .container.heading-titles.clearfix
+                        .float-left
+                            h2 Latest Articles
+                            h3 Check what#[br] happening inside
+                        .float-right
+                            a.view-more(href='') View More Works.
+                    .container
+                        .articles.md-flex
+                            -
+                                var articles = [{
+                                img: 'article-1-720x500.jpg',
+                                title:'Six Cover Letter Greetings for Every Situation',
+                                info:'By Wolf Richter, a San Francisco based executive, entrepreneur, start up specialist, …',
+                                author: 'Albert Kerri',
+                                time: '10 months ago'
+                                }, {
+                                img: 'article-2-720x500.jpg',
+                                title:'How to Set Up Google Analytics for WordPress',
+                                info:'By Wolf Richter, a San Francisco based executive, entrepreneur, start up specialist, …',
+                                author: 'Albert Kerri',
+                                time: '10 months ago'
+                                }, {
+                                img: 'article-4-720x500.jpg',
+                                title:'A Comprehensive Guide to Local SEO in 2018',
+                                info:'By Wolf Richter, a San Francisco based executive, entrepreneur, start up specialist, …',
+                                author: 'Albert Kerri',
+                                time: '10 months ago'
+                                }
+                                ]
+                            each article in articles
+                                .article.col-md-4
+                                    a.imglink(href='#')
+                                        img.responsive(src="img/"+article.img alt=article.title)
+                                    .content
+                                        h2.title #[a(href='#') #{article.title}]
+                                        p.info #{article.info}
+                                        span by #[a.author(href='#') #{article.author}] #{article.time}
+                // End latest-articles section
+                // Start lets-talk section
+                section.lets-talk.text-center
+                    .container
+                      h2 Interested? Please share your idea.
+                      a(href='#') Let's Talk
+                // End lets-talk section
         // End main
+        // Start Footer
         include pug/footer
+        // End Footer
 
         include pug/scripts

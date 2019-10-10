@@ -1,0 +1,474 @@
+// Start getting-started section
+.getting-started
+  padding: 130px 0
+  .content
+    h1
+      font-family: "caros-bold", sans-serif
+      font-size: 58px
+      color: $primaryColor
+      line-height: 68px
+      margin-bottom: 65px
+      letter-spacing: -1.64px
+    p
+      font-family: "caros-webfont", sans-serif
+      font-size: 19px
+      color: $secondaryColor
+      margin-bottom: 66px
+      letter-spacing: -.6px
+    a
+      font-family: "caros-bold", sans-serif
+      background-color: $orangeColor
+      border-radius: 100px
+      box-shadow: 0 15px 25px 0 rgba(255,129,86,0.3)
+      color: #fff
+      display: inline-block
+      padding: 18px 40px 18px 40px
+      transition: all .2s ease-in-out
+      &:hover
+        background-color: #fff
+        color: $orangeColor
+      &:after
+        font-size: 10px
+        margin-left: 6px
+
+  .image
+    background: url("../img/getting-started-768x535.png") no-repeat center/contain
+    @include maxMedium
+      display: none
+// End getting-started section
+// Start our-services section
+.our-services
+  padding: 12px 0
+  h2
+    font-family: "caros-webfont", sans-serif
+    font-size: 16px
+    font-weight: 400
+    color: $orangeColor
+    margin-bottom: 18px
+  h3
+    font-family: "caros-bold", sans-serif
+    font-size: 36px
+    color: $primaryColor
+    margin-bottom: 30px
+    line-height: 42px
+  .services
+    padding: 26px 0
+    .service
+      background-color: #ffffff
+      border-radius: 5px
+      box-shadow: 0 5px 15px 0 rgba(130,136,147,0.1)
+      padding: 60px 40px
+      margin: 0 15px
+      &:hover
+        .yellow
+          background-color: #ffdd6e
+          color: #fff
+        .navy
+          background-color: #9365d4
+          color: #fff
+        .orange
+          background-color: #ff6d34
+          color: #fff
+      .circle
+        width: 100px
+        height: 100px
+        border-radius: 50%
+        margin-bottom: 44px
+        transition: .3s ease-in-out
+        &:after
+          position: absolute
+          font-size: 32px
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+      .yellow
+        background-color: #fff7df
+        color: #ffdd6e
+        &:after
+          content: "\f101"
+      .navy
+        background-color: #f8f1ff
+        color: #9365d4
+        &:after
+          content: "\f100"
+      .orange
+        background-color: #ffeee4
+        color: #ff6d34
+        &:after
+          content: "\f102"
+      h4
+        font-family: "caros-bold", sans-serif
+        font-size: 18px
+        line-height: 24px
+        letter-spacing: -0.36px
+        color: $primaryColor
+        margin-bottom: 15px
+      p
+        font-family: "caros-webfont", sans-serif
+        font-size: 13px
+        line-height: 23px
+        color: $secondaryColor
+        margin-bottom: 15px
+      a
+        font-family: "caros-bold", sans-serif
+        font-size: 13px
+        line-height: 20px
+        letter-spacing: -.02px
+        color: $orangeColor
+        transition: all .3s ease-in-out
+        &:hover
+          color: $primaryColor
+// End our-services section
+// Start about-us section
+.about-us
+  padding: 150px 0 140px
+  .image
+    margin: 0 40px 0 80px
+    span
+      font-family: "caros-webfont", sans-serif
+      font-size: 14px
+      background-color: $orangeColor
+      box-shadow: 0 10px 20px 0 rgba(130,136,147,0.15)
+      border-radius: 5px
+      transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+      padding: 70px 40px 70px 40px
+      color: #fff
+      top: -55px
+      left: -65px
+    img
+      width: 100%
+      border-radius: 10px
+      box-shadow: 0 15px 20px 0 rgba(130,136,147,0.15)
+
+  h2
+    font-family: "caros-webfont", sans-serif
+    font-size: 16px
+    font-weight: 400
+    line-height: 16px
+    letter-spacing: -.04px
+    color: $orangeColor
+    margin-bottom: 27px
+  h3
+    font-family: "caros-bold", sans-serif
+    font-size: 36px
+    line-height: 42px
+    color: $primaryColor
+    margin-bottom: 45px
+  p
+    font-family: "caros-webfont", sans-serif
+    font-size: 16px
+    line-height: 26px
+    color: $secondaryColor
+    margin-bottom: 50px
+  .progress
+    max-width: 475px
+    margin-bottom: 59px
+    .data
+      margin-bottom: 4px
+      span
+        font-family: "caros-webfont", sans-serif
+        font-size: 13px
+        font-weight: 600
+        color: $primaryColor
+    .progressbar
+      background-color: #eee
+      border-radius: 6px
+      height: 8px
+      span
+        background-color: $orangeColor
+        border-radius: 6px
+        display: inline-block
+        height: 8px
+        top: 0
+        left: 0
+      [data-progress="50"]
+        width: 50%
+      [data-progress="90"]
+        width: 90%
+      [data-progress="70"]
+        width: 70%
+  .counter
+    margin-top: 88px
+    span
+      display: block
+    .number
+      font-family: "caros-bold", sans-serif
+      font-size: 48px
+      letter-spacing: -1.36px
+      color: $primaryColor
+    .title
+      font-family: "caros-webfont", sans-serif
+      font-size: 19px
+      letter-spacing: -0.06px
+      color: $secondaryColor
+// End about-us section
+// Start recent-works section
+.recent-works
+  .circle-image
+    width: 1000px
+    height: 900px
+    border-radius: 50%
+    background-color: #FFF8E2
+    top: -50px
+    right: 20px
+    z-index: -999
+  .work-slider
+    padding: 40px 0
+    .image
+      height: 457px
+      background: no-repeat center/cover
+      margin: 15px
+      border: 1px solid #eee
+      border-radius: 10px
+      box-shadow: 0 10px 20px 0 rgba(130,136,147,0.15)
+      outline: none
+    .image[data-image='slider1']
+     background-image: url("../img/slider1.jpg")
+    .image[data-image='slider2']
+       background-image: url("../img/slider2.png")
+    .image[data-image='slider3']
+       background-image: url("../img/slider3.jpg")
+    .image[data-image='slider4']
+      background-image: url("../img/slider4.jpg")
+    .image[data-image='slider5']
+      background-image: url("../img/slider5.jpg")
+    .image[data-image='slider6']
+      background-image: url("../img/slider6.png")
+    .slick-dots li button:before
+      font-size: 8px
+      transition: all .2s ease-in-out
+      &:hover
+        color: $primaryColor
+    .slick-dots li.slick-active button:before
+      font-size: 12px
+      color: #283a5e
+// End recent-works section
+// Start testimonials section
+.testimonials
+  background: url("../img/testimonials-bg-4.png") no-repeat center/cover
+  padding: 180px 0 136px
+  h2
+    font-family: "caros-webfont", sans-serif
+    font-size: 16px
+    color: $orangeColor
+    margin-bottom: 17px
+  h3
+    font-family: "caros-bold", sans-serif
+    font-size: 36px
+    margin-bottom: 80px
+    color: $primaryColor
+  .testimonial
+    outline: none
+    margin-bottom: 15px
+    p
+      font-family: "Poppins", sans-serif
+      font-size: 20px
+      color: #7a7c7f
+      line-height: 35px
+      margin: 0 auto 28px
+      max-width: 70%
+    img
+      width: 75px
+      height: 75px
+      border-radius: 50%
+      margin: 0 20px 0 26px
+      display: inline-block
+    .info
+      display: inline-block
+      top: -15px
+      span
+        display: block
+      .name
+        font-family: "Poppins", sans-serif
+        font-size: 17px
+        font-weight: 500
+        color: #242a37
+      .job
+        font-family: "Poppins", sans-serif
+        font-size: 15px
+        color: #7a7c7f
+  .slick-dots li button:before
+    font-size: 8px
+    color: $orangeColor
+    opacity: .25
+    transition: all .2s ease-in-out
+  .slick-dots li button
+    &:hover
+      &:before
+        opacity: 1
+        color: $orangeColor
+  .slick-dots li.slick-active button:before
+    font-size: 12px
+    opacity: 1
+    color: $orangeColor
+
+// End testimonials section
+// Start pricing-table section
+.pricing-table
+  h2
+    font-family: "caros-webfont", sans-serif
+    font-size: 16px
+    font-weight: 400
+    color: $orangeColor
+    margin-bottom: 16px
+  h3
+    font-family: "caros-bold", sans-serif
+    font-size: 36px
+    color: $primaryColor
+    margin-bottom: 50px
+  h4
+    font-family: "caros-webfont", sans-serif
+    font-size: 16px
+    font-weight: 400
+    color: $secondaryColor
+    margin-bottom: 75px
+  .price-table
+    border-radius: 5px
+    box-shadow: 0 5px 15px 0 rgba(130,136,147,0.1)
+    padding: 70px 40px
+    .price
+      font-family: "caros-bold", sans-serif
+      font-size: 80px
+      letter-spacing: -3px
+      color: $primaryColor
+      &:before
+        content: '$'
+        position: absolute
+        left: 95px
+        top: 18px
+        color: #dce0e6
+        font-family: "caros-webfont", sans-serif
+        font-size: 23px
+    .title
+      font-family: "caros-bold", sans-serif
+      font-size: 28px
+      color: $primaryColor
+      margin: 5px 0 34px
+    span
+      font-family: "caros-webfont", sans-serif
+      font-size: 13px
+      display: block
+      color: $secondaryColor
+
+    .features
+      span
+        margin-bottom: 15px
+    a
+      color: $secondaryColor
+      font-family: "caros-webfont", sans-serif
+      font-size: 16px
+      font-weight: 600
+      background-color: #f7f8fb
+      border-radius: 50px
+      box-shadow: 0 2px 5px 0 rgba(130,136,147,0.1)
+      margin-top: 30px
+      padding: 18px 0
+      display: inline-block
+      width: 100%
+      max-width: 170px
+      transition: all .3s ease-in-out
+      &:hover
+        color: #fff
+        background-color: $secondaryColor
+
+    &.special
+      border-radius: 10px
+      box-shadow: 0 28px 50px 0 rgba(130,136,147,0.15)
+      .price, .title
+        color: $orangeColor
+      a
+        color: $orangeColor
+        background-color: #ffeee4
+        &:hover
+          color: #fff
+          background-color: $orangeColor
+
+// End pricing-table section
+// Start latest-articles section
+.latest-articles
+  padding: 112px 0
+  .circle-image
+    width: 940px
+    height: 900px
+    border-radius: 50%
+    background-color: #FFE9E1
+    top: 25px
+    left: 0
+    z-index: -999
+  .articles
+    margin-top: 40px
+    .article
+      margin: 0 15px
+      background-color: #fff
+      box-shadow: 0 5px 15px 0 rgba(130,136,147,0.15)
+      .imglink
+        display: inline-block
+        margin-bottom: 35px
+      .content
+        padding: 0 42px 40px
+        h2
+          font-family: "caros-bold", sans-serif
+          font-size: 22px
+          font-weight: 400
+          line-height: 26px
+          letter-spacing: -0.44px
+          margin-bottom: 21px
+          a
+            color: $primaryColor
+            transition: all .2s ease-in-out
+            &:hover
+              color: $orangeColor
+        .info
+          font-family: "caros-webfont", sans-serif
+          font-size: 14px
+          line-height: 24px
+          color: $secondaryColor
+          margin-bottom: 40px
+        span
+          font-family: "caros-webfont", sans-serif
+          font-size: 13px
+          line-height: 24px
+          color: $secondaryColor
+        .author
+          color: $orangeColor
+          transition: all .2s ease-in-out
+          &:hover
+            color: $primaryColor
+          &:after
+            content: '\2022'
+            display: inline-block
+            color: #ddd
+            margin: 0 10px 2px 10px
+
+// End latest-articles section
+// Start lets-talk section
+.lets-talk
+  padding: 100px 0
+  background-image: url('../img/Map.png')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: contain
+  .container
+    max-width: 640px
+  h2
+    font-family: "caros-bold", sans-serif
+    font-size: 45px
+    font-weight: 400
+    line-height: 55px
+    letter-spacing: -1.36px
+    color: $primaryColor
+    margin-bottom: 75px
+  a
+    font-family: "caros-bold", sans-serif
+    font-size: 16px
+    letter-spacing: 0.1px
+    border-radius: 100px
+    box-shadow: 0 14px 24px 0 rgba(255,109,52,0.25)
+    padding: 18px 60px 18px 60px
+    color: #fff
+    background-color: $orangeColor
+    transition: all .3s ease-in-out
+    &:hover
+      color: $orangeColor
+      background-color: #fff
+// End lets-talk section

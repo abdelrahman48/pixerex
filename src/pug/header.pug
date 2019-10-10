@@ -1,4 +1,22 @@
 header
-    // Start navigation
     nav
-    // End navigation
+        .container.relative.flex.align-items-center
+            .menu.absolute
+            .logo.text-left.col-2
+                a(href="home.html") Nanum.
+            .navigation.col-5
+                -
+                    var arr = [
+                    {name:'Home'},
+                    {name:'services'},
+                    {name:'About'},
+                    {name:'Blog'},
+                    {name:'Contact'}
+                    ]
+                ul.flex
+                    each nav in arr
+                        li.flex-one: a(href=nav.name.toLowerCase() + '.html') #{nav.name}
+
+            .contact.col-5.text-right
+                span Call us #[span.number +880.734.039]
+                a.flaticon.flaticon-arrow(href='#') Contact us
