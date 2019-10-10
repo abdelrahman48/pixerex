@@ -246,14 +246,19 @@
   .circle-image
     top: -2em
     right: -25em
-    height: 65em
-    width: 70em
+    height: 55em
+    width: 60em
     background: #ffdd6e
     OPACITY: 0.2
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%
     z-index: -999
     @include maxMedium
       display: none
+  h2
+    margin-bottom: 20px
+  h3
+    @include maxMedium
+      margin-bottom: 20px
   .text, .btn
     @include maxMedium
       float: none
@@ -293,11 +298,15 @@
 // End recent-works section
 // Start testimonials section
 .testimonials
-  background: url("../img/testimonials-bg-4.png") no-repeat center/cover
   padding: 180px 0 136px
+  background: url("../img/testimonials-bg-4.png") no-repeat 70%/cover
+  @include maxMedium
+    background-position: 70%
+    padding: 80px
   h2
     font-family: "caros-webfont", sans-serif
     font-size: 16px
+    font-weight: 400
     color: $orangeColor
     margin-bottom: 17px
   h3
@@ -305,6 +314,8 @@
     font-size: 36px
     margin-bottom: 80px
     color: $primaryColor
+    @include maxMedium
+      margin-bottom: 40px
   .testimonial
     outline: none
     margin-bottom: 15px
@@ -315,6 +326,10 @@
       line-height: 35px
       margin: 0 auto 28px
       max-width: 70%
+      @include maxMedium
+        font-size: 16px
+      @include maxLarge
+        max-width: 95%
     img
       width: 75px
       height: 75px
@@ -370,19 +385,27 @@
     font-weight: 400
     color: $secondaryColor
     margin-bottom: 75px
+    @include maxMedium
+      margin-bottom: 40px
   .price-table
     border-radius: 5px
     box-shadow: 0 5px 15px 0 rgba(130,136,147,0.1)
     padding: 70px 40px
+    @include maxLarge
+      margin-bottom: 35px
+      max-width: 600px
+      margin-right: auto
+      margin-left: auto
     .price
       font-family: "caros-bold", sans-serif
       font-size: 80px
       letter-spacing: -3px
       color: $primaryColor
+      display: inline-block
       &:before
         content: '$'
         position: absolute
-        left: 95px
+        left: -12px
         top: 18px
         color: #dce0e6
         font-family: "caros-webfont", sans-serif

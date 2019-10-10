@@ -110,7 +110,7 @@ html(lang="en")
                 // End recent-works section
                 // Start testimonials section
                 section.testimonials
-                    .container.text-center
+                    .container.heading-titles.text-center
                         h2 Testimonials
                         h3 Real customers testimonials
                         .testimonial-slider
@@ -157,11 +157,11 @@ html(lang="en")
                 // End testimonials section
                 // Start pricing-table section
                 section.pricing-table
-                    .container.text-center
+                    .container.heading-titles.text-center
                         h2 Pricing Table
                         h3 Not any hidden charges, choose your plan
                         h4 We Have Different Pricing Types To Choose
-                        .md-flex.clearfix.align-items-center
+                        .lg-flex.clearfix.align-items-center
                             -
                                 var prices = [{
                                 price: '49',
@@ -187,8 +187,8 @@ html(lang="en")
                                 }
                                 ]
                             each price in prices
-                                .price-table.col-md-4(class=price.class)
-                                    .price.relative #{price.price}
+                                .price-table.col-lg-4(class=price.class)
+                                    span.price.relative #{price.price}
                                     span #{price.package}
                                     span.title #{price.title}
                                     .features
