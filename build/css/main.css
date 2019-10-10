@@ -36,38 +36,38 @@ main {
   overflow: hidden;
 }
 
-nav {
+header nav {
   padding: 60px 0;
 }
 
-nav .logo a {
+header nav .logo a {
   font-family: "caros-bold", sans-serif;
   font-size: 26px;
   color: #283a5e;
 }
 
-nav .navigation a {
+header nav .navigation a {
   font-family: "caros-webfont", sans-serif;
   color: #283a5e;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
-nav .navigation a:hover {
+header nav .navigation a:hover {
   color: #ff6d34;
 }
 
-nav .contact span {
+header nav .contact span {
   font-family: "caros-webfont", sans-serif;
   color: #828893;
 }
 
-nav .contact .number {
+header nav .contact .number {
   font-weight: 600;
   color: #ff6d34;
 }
 
-nav .contact a {
+header nav .contact a {
   font-family: "caros-bold", sans-serif;
   background-color: #fff;
   border-radius: 3px;
@@ -80,18 +80,18 @@ nav .contact a {
   transition: all .2s ease-in-out;
 }
 
-nav .contact a:hover {
+header nav .contact a:hover {
   background-color: #ff6d34;
   color: #fff;
 }
 
-nav .contact a:after {
+header nav .contact a:after {
   font-size: 10px;
   margin-left: 6px;
 }
 
 footer {
-  padding: 35px 0 95px;
+  padding: 100px 0 80px;
 }
 
 footer h2 {
@@ -112,8 +112,22 @@ footer p, footer a, footer span {
   color: #828893;
 }
 
-footer .content {
-  padding-left: 30px;
+@media (max-width: 991px) {
+  footer p, footer a, footer span {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer .content {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .content {
+    margin-bottom: 30px;
+  }
 }
 
 footer .content .title {
@@ -144,8 +158,26 @@ footer .copyright nav {
   padding: 0;
 }
 
+@media (max-width: 767px) {
+  footer .copyright nav {
+    display: none;
+  }
+}
+
 footer .copyright nav a {
   margin: 0 -1px 0 30px;
+}
+
+@media (min-width: 768px) {
+  footer .copyright .socials {
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .copyright .socials {
+    margin-top: 25px;
+  }
 }
 
 footer .copyright .socials a {
@@ -685,7 +717,7 @@ footer .svg svg path {
 @media (max-width: 767px) {
   .testimonials {
     background-position: 70%;
-    padding: 80px;
+    padding: 80px 0;
   }
 }
 
@@ -913,6 +945,12 @@ footer .svg svg path {
   padding: 112px 0;
 }
 
+@media (max-width: 991px) {
+  .latest-articles {
+    padding: 50px 0;
+  }
+}
+
 .latest-articles .circle-image {
   opacity: 0.15;
   top: 2em;
@@ -1083,6 +1121,12 @@ footer .svg svg path {
   background-size: contain;
 }
 
+@media (max-width: 991px) {
+  .lets-talk {
+    padding: 50px 0;
+  }
+}
+
 .lets-talk .container {
   max-width: 640px;
 }
@@ -1095,6 +1139,13 @@ footer .svg svg path {
   letter-spacing: -1.36px;
   color: #283a5e;
   margin-bottom: 75px;
+}
+
+@media (max-width: 991px) {
+  .lets-talk h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 .lets-talk a {

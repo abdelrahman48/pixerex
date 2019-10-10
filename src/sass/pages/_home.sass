@@ -302,7 +302,7 @@
   background: url("../img/testimonials-bg-4.png") no-repeat 70%/cover
   @include maxMedium
     background-position: 70%
-    padding: 80px
+    padding: 80px 0
   h2
     font-family: "caros-webfont", sans-serif
     font-size: 16px
@@ -458,6 +458,8 @@
 // Start latest-articles section
 .latest-articles
   padding: 112px 0
+  @include maxLarge
+    padding: 50px 0
   .circle-image
     opacity: 0.15
     top: 2em
@@ -549,6 +551,8 @@
 // Start lets-talk section
 .lets-talk
   padding: 100px 0
+  @include maxLarge
+    padding: 50px 0
   background-image: url('../img/Map.png')
   background-position: center center
   background-repeat: no-repeat
@@ -563,6 +567,9 @@
     letter-spacing: -1.36px
     color: $primaryColor
     margin-bottom: 75px
+    @include maxLarge
+      font-size: 32px
+      line-height: 40px
   a
     font-family: "caros-bold", sans-serif
     font-size: 16px
