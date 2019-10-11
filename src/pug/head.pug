@@ -1,4 +1,14 @@
 head
+    script.
+        // remove desktop menu before page load
+        window.onload = function () {
+            if (window.innerWidth > 1200) {
+                $('.navigation').removeClass('hide');
+                $('.contact').removeClass('hide');
+            } else {
+                $('header').addClass('mobile');
+            }
+        };
     meta(charset="UTF-8")
     meta(http-equiv="x-ua-compatible" content="ie=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -21,5 +31,8 @@ head
     link(rel="stylesheet" href="vendor/css/slick.css")
     link(rel="stylesheet" href="vendor/css/slick-theme.css")
     link(rel="stylesheet" href="vendor/css/flaticon.css")
+    link(rel="stylesheet" href="vendor/css/fontawesome.css")
 
     link(rel="stylesheet" href="css/main.css")
+        
+

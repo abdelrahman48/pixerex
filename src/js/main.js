@@ -1,3 +1,12 @@
+// remove desktop menu
+// window.onload = function () {
+//     if (window.innerWidth > 1200) {
+//         $('.navigation').removeClass('hide');
+//         $('.contact').removeClass('hide');
+//     } else {
+//         $('header').addClass('mobile');
+//     }
+// };
 $(function() {
     $('.work-slider').slick({
         dots: true,
@@ -30,7 +39,7 @@ $(function() {
         arrows: false,
         adaptiveHeight: true
     });
-    // Start show window size on IE
+    // show window size on IE
     // var x = document.querySelector('.window-size');
     // x.textContent = window.innerWidth;
     // window.onresize = function () {
@@ -70,6 +79,50 @@ $(function() {
     // window.addEventListener('resize', lazyLoad);
     // window.addEventListener("orientationChange", lazyLoad);
 
-    // Start prevent default when click on links
+    // prevent default when click on links
     $('a').click(function (e) { e.preventDefault() });
+
+    // add class mobile to the header when viewport at small screen
+    $(window).bind("resize", function () {
+        if (window.innerWidth < 1200) {
+            $('header').addClass('mobile');
+            $('.navigation').addClass('hide');
+            $('.contact').addClass('hide');
+        } else {
+            $('header').removeClass('mobile');
+            $('.navigation').removeClass('slide open show hide');
+            $('.contact').removeClass('hide');
+            $('.overlay').removeClass('show opacity');
+        }
+    }).trigger('resize');
+
+    var mobileMenu = $('.navigation'),
+        mobileLogo = $('.navigation .logo'),
+        overlay = $('.overlay');
+    // open mobile menu
+    $('.menu-toggle').click(function () {
+        mobileMenu.addClass('show');
+        mobileLogo.addClass('show');
+        overlay.addClass('show');
+        setTimeout(function () {
+            mobileMenu.addClass('slide');
+            mobileMenu.addClass('open');
+            overlay.addClass('opacity');
+        }, 10);
+    });
+
+    // close mobile menu
+    window.onclick= function (e) {
+        if(e.target.classList.contains('overlay') ||
+            e.target.classList.contains('close')) {
+            mobileMenu.removeClass('slide open');
+            overlay.removeClass('opacity');
+            setTimeout(function () {
+                mobileMenu.toggleClass('show hide');
+                mobileLogo.removeClass('show');
+                overlay.removeClass('show');
+            }, 500);
+        }
+    }
 });
+

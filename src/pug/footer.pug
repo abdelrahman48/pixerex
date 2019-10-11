@@ -27,13 +27,13 @@ footer.relative
         .socials.col-md-3
             -
                 var arr = [
-                {name:'google-plus', class:'flaticon-google-plus'},
-                {name:'twitter', class:'flaticon-twitter'},
-                {name:'instagram', class: 'flaticon-logo'},
-                {name:'linkedin', class: 'flaticon-linkedin'}
+                {name:'google-plus', class:'fab fa-google-plus-g'},
+                {name:'twitter', class:'fab fa-twitter'},
+                {name:'instagram', class: 'fab fa-instagram'},
+                {name:'linkedin', class: 'fab fa-linkedin-in'}
                 ]
             each social in arr
-                a.flaticon(class=social.class href="#")
+                a(class=social.class href="#")
 
     .svg
         svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1047.1 3.7" preserveAspectRatio="xMidYMin slice")

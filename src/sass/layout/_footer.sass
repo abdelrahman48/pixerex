@@ -32,6 +32,8 @@ footer
           color: $orangeColor
   .copyright
     margin-top: 5px
+    @include minMedium
+      padding-top: 50px
     nav
       padding: 0
       @include maxMedium
@@ -45,6 +47,10 @@ footer
         margin-top: 25px
       a
         margin: 0 8px
+        font-size: 16px
+        transition: all .2s ease-in-out
+        &:hover
+          color: $orangeColor
   .svg
     overflow: hidden
     position: absolute

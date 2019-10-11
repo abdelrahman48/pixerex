@@ -1,22 +1,29 @@
 header
     nav
-        .container.relative.flex.align-items-center
-            .menu.absolute
-            .logo.text-left.col-2
-                a(href="home.html") Nanum.
-            .navigation.col-5
+        .container
+            .logo.col-2
+                a(href="home.html") Nanum
+            .menu-toggle
+                span
+            .navigation.hide.col-5
                 -
                     var arr = [
+                    {name:'Nanum', class: 'logo', elem: 'span'},
                     {name:'Home'},
                     {name:'services'},
                     {name:'About'},
                     {name:'Blog'},
                     {name:'Contact'}
                     ]
-                ul.flex
+                ul
                     each nav in arr
-                        li.flex-one: a(href=nav.name.toLowerCase() + '.html') #{nav.name}
+                        if nav.elem
+                            li(class=nav.class)
+                                #{nav.elem}(class='close')
+                                a(href=nav.name.toLowerCase() + '.html') #{nav.name}
+                        else
+                            li(class=nav.class): a(href=nav.name.toLowerCase() + '.html') #{nav.name}
 
-            .contact.col-5.text-right
+            .contact.hide.col-5
                 span Call us #[span.number +880.734.039]
                 a.flaticon.flaticon-arrow(href='#') Contact us
