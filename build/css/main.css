@@ -415,6 +415,14 @@ footer .svg svg path {
           transform-origin: center;
 }
 
+.window-size {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: red;
+  font-size: 18px;
+}
+
 .overlay {
   display: none;
   position: fixed;
@@ -1927,6 +1935,11 @@ footer .svg svg path {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.image.lazyload {
+  background-image: none !important;
+  background-color: #F1F1FA;
 }
 
 .heading-titles h2 {

@@ -3,6 +3,7 @@ doctype
 html(lang="en")
     include pug/head
     body
+        //span.window-size 0
         .overlay
         // Start Header
         include pug/header
@@ -48,10 +49,10 @@ html(lang="en")
                 // Start about-us section
                 section.about-us
                     .container.md-flex
-                        .image
+                        .image.lazyload
                             span.square ABOUT US
-                            img(srcset="img/about-us-271x300.jpg 271w, img/about-us-451x499.jpg 451w" sizes="(max-width: 400px) 271w, 451w"
-                            src='img/about-us-451x499.jpg' alt='Work Office')
+                            img.lazyload(data-srcset="img/about-us-271x300.jpg 271w, img/about-us-451x499.jpg 451w" sizes="(max-width: 400px) 271w, 451w"
+                                data-src='img/about-us-451x499.jpg' alt='Work Office')
 
                         .content.heading-titles
                             h2 Best Digital Agency In The World
@@ -107,10 +108,10 @@ html(lang="en")
                                 {url: 'slider5'},{url: 'slider6'}
                             ]
                         each image in images
-                            .image(data-image=image.url)
+                            .image.lazyload(data-image=image.url)
                 // End recent-works section
                 // Start testimonials section
-                section.testimonials
+                section.testimonials.image.lazyload
                     .container.heading-titles
                         h2 Testimonials
                         h3 Real customers testimonials
@@ -151,7 +152,7 @@ html(lang="en")
                             each testimonial in testimonials
                                 .testimonial
                                     p #{testimonial.testimonial}
-                                    img(src=testimonial.img alt=testimonial.name)
+                                    img.lazyload(data-src=testimonial.img alt=testimonial.name)
                                     div.info
                                         span.name #{testimonial.name}
                                         span.job #{testimonial.job}
@@ -236,14 +237,14 @@ html(lang="en")
                             each article in articles
                                 .article
                                     a.imglink(href='#')
-                                        img(src="img/"+article.img alt=article.imgalt)
+                                        img.lazyload(data-src="img/"+article.img alt=article.imgalt)
                                     .content
                                         h2.title #[a(href='#') #{article.title}]
                                         p.info #{article.info}
                                         span by #[a.author(href='#') #{article.author}] #{article.time}
                 // End latest-articles section
                 // Start lets-talk section
-                section.lets-talk
+                section.lets-talk.image.lazyload
                     .container
                       h2 Interested? Please share your idea.
                       a(href='#') Let's Talk

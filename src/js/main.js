@@ -1,4 +1,4 @@
-// remove desktop menu
+// remove desktop menu at small screens
 // window.onload = function () {
 //     if (window.innerWidth > 1200) {
 //         $('.navigation').removeClass('hide');
@@ -8,6 +8,7 @@
 //     }
 // };
 $(function() {
+    // slider
     $('.work-slider').slick({
         dots: true,
         infinite: true,
@@ -39,45 +40,45 @@ $(function() {
         arrows: false,
         adaptiveHeight: true
     });
+
     // show window size on IE
     // var x = document.querySelector('.window-size');
     // x.textContent = window.innerWidth;
     // window.onresize = function () {
-    //     console.log(x);
     //     x.textContent = window.innerWidth
     // };
 
     // lazy load images
-    // function lazyLoad() {
-    //     var lazyImages = document.querySelectorAll('.lazyload');
-    //     var inAdvance = 300;
-    //
-    //     setTimeout(function () {
-    //         lazyImages.forEach(function (image) {
-    //             if(image.classList.contains('lazyload')) {
-    //                 if (image.offsetTop < window.innerHeight + window.pageYOffset + inAdvance) {
-    //                     if (image.dataset.src) {
-    //                         image.src = image.dataset.src;
-    //                     }
-    //                     if (image.dataset.srcset) {
-    //                         image.srcset = image.dataset.srcset;
-    //                     }
-    //                     image.classList.remove('lazyload');
-    //                     image.classList.add('loaded');
-    //                 }
-    //             }
-    //         });
-    //         if (lazyImages.length === 0) {
-    //             window.removeEventListener('scroll', lazyLoad);
-    //             window.removeEventListener('resize', lazyLoad);
-    //             window.removeEventListener("orientationChange", lazyLoad);
-    //         }
-    //     }, 20);
-    // }
-    // lazyLoad();
-    // window.addEventListener('scroll', lazyLoad);
-    // window.addEventListener('resize', lazyLoad);
-    // window.addEventListener("orientationChange", lazyLoad);
+    function lazyLoad() {
+        var lazyImages = $('.lazyload');
+        var inAdvance = 300;
+
+        setTimeout(function () {
+            lazyImages.each(function (i,image) {
+                var img = $(this);
+                if(img.hasClass('lazyload')) {
+                    if (img.offset().top < window.innerHeight + window.pageYOffset + inAdvance) {
+                        if (img.attr('data-src')) {
+                            img.attr('src', img.attr('data-src'));
+                        }
+                        if (img.attr('data-srcset')) {
+                            img.attr('srcset', img.attr('data-srcset')) ;
+                        }
+                        img.removeClass('lazyload');
+                    }
+                }
+            });
+            if (lazyImages.length === 0) {
+                window.removeEventListener('scroll', lazyLoad);
+                window.removeEventListener('resize', lazyLoad);
+                window.removeEventListener("orientationChange", lazyLoad);
+            }
+        }, 20);
+    }
+    lazyLoad();
+    window.addEventListener('scroll', lazyLoad);
+    window.addEventListener('resize', lazyLoad);
+    window.addEventListener("orientationChange", lazyLoad);
 
     // prevent default when click on links
     $('a').click(function (e) { e.preventDefault() });
@@ -104,6 +105,7 @@ $(function() {
         mobileMenu.addClass('show');
         mobileLogo.addClass('show');
         overlay.addClass('show');
+        $('body').css('overflow','hidden');
         setTimeout(function () {
             mobileMenu.addClass('slide');
             mobileMenu.addClass('open');
@@ -115,6 +117,7 @@ $(function() {
     window.onclick= function (e) {
         if(e.target.classList.contains('overlay') ||
             e.target.classList.contains('close')) {
+            $('body').css('overflow','');
             mobileMenu.removeClass('slide open');
             overlay.removeClass('opacity');
             setTimeout(function () {

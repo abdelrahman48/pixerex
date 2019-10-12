@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <!--span.window-size 0-->
     <div class="overlay"></div>
     <!-- Start Header-->
     <header>
@@ -99,7 +100,7 @@
         <!-- Start about-us section-->
         <section class="about-us">
           <div class="container md-flex">
-            <div class="image"><span class="square">ABOUT US</span><img srcset="img/about-us-271x300.jpg 271w, img/about-us-451x499.jpg 451w" sizes="(max-width: 400px) 271w, 451w" src="img/about-us-451x499.jpg" alt="Work Office"></div>
+            <div class="image lazyload"><span class="square">ABOUT US</span><img class="lazyload" data-srcset="img/about-us-271x300.jpg 271w, img/about-us-451x499.jpg 451w" sizes="(max-width: 400px) 271w, 451w" data-src="img/about-us-451x499.jpg" alt="Work Office"></div>
             <div class="content heading-titles">
               <h2>Best Digital Agency In The World</h2>
               <h3>We're a dynamic team of Marketing Expert.</h3>
@@ -137,39 +138,39 @@
             <div class="btn"><a class="view-more" href="#">View More Works.</a></div>
           </div>
           <div class="work-slider">
-            <div class="image" data-image="slider1"></div>
-            <div class="image" data-image="slider2"></div>
-            <div class="image" data-image="slider3"></div>
-            <div class="image" data-image="slider4"></div>
-            <div class="image" data-image="slider5"></div>
-            <div class="image" data-image="slider6"></div>
+            <div class="image lazyload" data-image="slider1"></div>
+            <div class="image lazyload" data-image="slider2"></div>
+            <div class="image lazyload" data-image="slider3"></div>
+            <div class="image lazyload" data-image="slider4"></div>
+            <div class="image lazyload" data-image="slider5"></div>
+            <div class="image lazyload" data-image="slider6"></div>
           </div>
         </section>
         <!-- End recent-works section-->
         <!-- Start testimonials section-->
-        <section class="testimonials">
+        <section class="testimonials image lazyload">
           <div class="container heading-titles">
             <h2>Testimonials</h2>
             <h3>Real customers testimonials</h3>
             <div class="testimonial-slider">
               <div class="testimonial">
-                <p>I had some bad situations in the past so I was eager to try Nanum. I can confidently say that Nanum saved me hundreds of dollars so far I can confidently say that Nanum saved me hundreds of dollars so far.</p><img src="img/face-3.jpg" alt="Melissa Doe">
+                <p>I had some bad situations in the past so I was eager to try Nanum. I can confidently say that Nanum saved me hundreds of dollars so far I can confidently say that Nanum saved me hundreds of dollars so far.</p><img class="lazyload" data-src="img/face-3.jpg" alt="Melissa Doe">
                 <div class="info"><span class="name">Melissa Doe</span><span class="job">Instagramer</span></div>
               </div>
               <div class="testimonial">
-                <p>I had some bad situations in the past so I was eager to try Nanum. I can confidently say that Nanum saved me hundreds of dollars so far I can confidently say that Nanum saved me hundreds of dollars so far.</p><img src="img/face-2.jpg" alt="Katty Liore">
+                <p>I had some bad situations in the past so I was eager to try Nanum. I can confidently say that Nanum saved me hundreds of dollars so far I can confidently say that Nanum saved me hundreds of dollars so far.</p><img class="lazyload" data-src="img/face-2.jpg" alt="Katty Liore">
                 <div class="info"><span class="name">Katty Liore</span><span class="job">Youtuber</span></div>
               </div>
               <div class="testimonial">
-                <p>I had some bad situations in the past so I was eager to try Nanum. I can confidently say that Nanum saved me hundreds of dollars so far I can confidently say that Nanum saved me hundreds of dollars so far.</p><img src="img/face-1.jpg" alt="Adam Brown">
+                <p>I had some bad situations in the past so I was eager to try Nanum. I can confidently say that Nanum saved me hundreds of dollars so far I can confidently say that Nanum saved me hundreds of dollars so far.</p><img class="lazyload" data-src="img/face-1.jpg" alt="Adam Brown">
                 <div class="info"><span class="name">Adam Brown</span><span class="job">CEO Figma</span></div>
               </div>
               <div class="testimonial">
-                <p>I had some bad situations in the past so I was eager to try Nanum. I can confidently say that Nanum saved me hundreds of dollars so far I can confidently say that Nanum saved me hundreds of dollars so far.</p><img src="img/face-5.jpg" alt="Melina Makayen">
+                <p>I had some bad situations in the past so I was eager to try Nanum. I can confidently say that Nanum saved me hundreds of dollars so far I can confidently say that Nanum saved me hundreds of dollars so far.</p><img class="lazyload" data-src="img/face-5.jpg" alt="Melina Makayen">
                 <div class="info"><span class="name">Melina Makayen</span><span class="job">Graphic Designer</span></div>
               </div>
               <div class="testimonial">
-                <p>I had some bad situations in the past so I was eager to try Nanum. I can confidently say that Nanum saved me hundreds of dollars so far I can confidently say that Nanum saved me hundreds of dollars so far.</p><img src="img/face-4.jpg" alt="Sara Gomez">
+                <p>I had some bad situations in the past so I was eager to try Nanum. I can confidently say that Nanum saved me hundreds of dollars so far I can confidently say that Nanum saved me hundreds of dollars so far.</p><img class="lazyload" data-src="img/face-4.jpg" alt="Sara Gomez">
                 <div class="info"><span class="name">Sara Gomez</span><span class="job">Web Designer</span></div>
               </div>
             </div>
@@ -211,19 +212,19 @@
           </div>
           <div class="container">
             <div class="articles md-flex">
-              <div class="article"><a class="imglink" href="#"><img src="img/article-1-720x500.jpg" alt="Cover Letter"></a>
+              <div class="article"><a class="imglink" href="#"><img class="lazyload" data-src="img/article-1-720x500.jpg" alt="Cover Letter"></a>
                 <div class="content">
                   <h2 class="title"><a href="#">Six Cover Letter Greetings for Every Situation</a></h2>
                   <p class="info">By Wolf Richter, a San Francisco based executive, entrepreneur, start up specialist, …</p><span>by <a class="author" href="#">Albert Kerri</a> 10 months ago</span>
                 </div>
               </div>
-              <div class="article"><a class="imglink" href="#"><img src="img/article-2-720x500.jpg" alt="Google Analytics"></a>
+              <div class="article"><a class="imglink" href="#"><img class="lazyload" data-src="img/article-2-720x500.jpg" alt="Google Analytics"></a>
                 <div class="content">
                   <h2 class="title"><a href="#">How to Set Up Google Analytics for WordPress</a></h2>
                   <p class="info">By Wolf Richter, a San Francisco based executive, entrepreneur, start up specialist, …</p><span>by <a class="author" href="#">Albert Kerri</a> 10 months ago</span>
                 </div>
               </div>
-              <div class="article"><a class="imglink" href="#"><img src="img/article-4-720x500.jpg" alt="Local SEO"></a>
+              <div class="article"><a class="imglink" href="#"><img class="lazyload" data-src="img/article-4-720x500.jpg" alt="Local SEO"></a>
                 <div class="content">
                   <h2 class="title"><a href="#">A Comprehensive Guide to Local SEO in 2018</a></h2>
                   <p class="info">By Wolf Richter, a San Francisco based executive, entrepreneur, start up specialist, …</p><span>by <a class="author" href="#">Albert Kerri</a> 10 months ago</span>
@@ -234,7 +235,7 @@
         </section>
         <!-- End latest-articles section-->
         <!-- Start lets-talk section-->
-        <section class="lets-talk">
+        <section class="lets-talk image lazyload">
           <div class="container">
             <h2>Interested? Please share your idea.</h2><a href="#">Let's Talk</a>
           </div>
