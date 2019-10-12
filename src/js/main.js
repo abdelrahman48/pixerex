@@ -1,12 +1,12 @@
 // remove desktop menu at small screens
-// window.onload = function () {
-//     if (window.innerWidth > 1200) {
-//         $('.navigation').removeClass('hide');
-//         $('.contact').removeClass('hide');
-//     } else {
-//         $('header').addClass('mobile');
-//     }
-// };
+window.onload = function () {
+    if (window.innerWidth > 1200) {
+        $('.navigation').removeClass('hide');
+        $('.contact').removeClass('hide');
+    } else {
+        $('header').addClass('mobile');
+    }
+};
 $(function() {
     // slider
     $('.work-slider').slick({
