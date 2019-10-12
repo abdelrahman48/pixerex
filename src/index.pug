@@ -20,11 +20,11 @@ html(lang="en")
                         .image.col-md-6
                 // End getting-started section
                 // Start our-services section
-                section.our-services.text-center
+                section.our-services
                     .container
                         h2 OUR SERVICES
                         h3 The Best Online Marketing and #[br] Seo Services
-                        .services.md-flex.text-left
+                        .services.md-flex
                             -
                                 var services = [{
                                 bgColor: 'yellow',
@@ -40,18 +40,18 @@ html(lang="en")
 
                             each service in services
                                 .service
-                                    .circle.flaticon.relative(class=service.bgColor)
+                                    .circle.flaticon(class=service.bgColor)
                                     h4.title #{service.title}
                                     p.info #{service.info}
                                     a.link(href='#') More about #{service.title}
                 // End our-services section
                 // Start about-us section
                 section.about-us
-                    .container.md-flex.align-items-center
-                        .image.relative
-                            span.square.absolute ABOUT US
-                            img.responsive(srcset="img/about-us-271x300.jpg 271w, img/about-us-451x499.jpg 451w" sizes="(max-width: 400px) 271w, 451w"
-                            src='img/about-us-451x499.jpg' alt='')
+                    .container.md-flex
+                        .image
+                            span.square ABOUT US
+                            img(srcset="img/about-us-271x300.jpg 271w, img/about-us-451x499.jpg 451w" sizes="(max-width: 400px) 271w, 451w"
+                            src='img/about-us-451x499.jpg' alt='Work Office')
 
                         .content.heading-titles
                             h2 Best Digital Agency In The World
@@ -61,44 +61,44 @@ html(lang="en")
                             .progress
                                 .data.clearfix
                                     span SEO
-                                    span.float-right 50%
-                                .progressbar.relative
-                                    span.absolute(data-progress="50")
+                                    span.number 50%
+                                .progressbar
+                                    span(data-progress="50")
                             .progress
                                 .data
                                     span MARKETING
-                                    span.float-right 90%
-                                .progressbar.relative
-                                    span.absolute(data-progress="90")
+                                    span 90%
+                                .progressbar
+                                    span(data-progress="90")
                             .progress
                                 .data
                                     span DESIGN
-                                    span.float-right 70%
-                                .progressbar.relative
-                                    span.absolute(data-progress="70")
+                                    span 70%
+                                .progressbar
+                                    span(data-progress="70")
                     .container.counter.md-flex
-                        .info.flex-one.text-center
+                        .info
                             span.number 3420+
                             span.title Completed Projects
-                        .info.flex-one.text-center
+                        .info
                             span.number 25
                             span.title Headquarters
-                        .info.flex-one.text-center
+                        .info
                             span.number 325K
                             span.title Worldwide Users
-                        .info.flex-one.text-center
+                        .info
                             span.number 89
                             span.title Award Winner
                 // End about-us section
                 // Start recent-works section
-                section.recent-works.relative
-                    .circle-image.absolute
-                    .container.heading-titles.clearfix
-                        .text.float-left
+                section.recent-works
+                    .circle-image
+                    .container.heading-titles
+                        .text
                             h2 Recent Works
                             h3 We've done a lot's,#[br] let's check some
-                        .btn.float-right
-                            a.view-more(href='') View More Works.
+                        .btn
+                            a.view-more(href='#') View More Works.
                     .work-slider
                         -
                             var images = [
@@ -111,7 +111,7 @@ html(lang="en")
                 // End recent-works section
                 // Start testimonials section
                 section.testimonials
-                    .container.heading-titles.text-center
+                    .container.heading-titles
                         h2 Testimonials
                         h3 Real customers testimonials
                         .testimonial-slider
@@ -152,17 +152,17 @@ html(lang="en")
                                 .testimonial
                                     p #{testimonial.testimonial}
                                     img(src=testimonial.img alt=testimonial.name)
-                                    div.info.relative
+                                    div.info
                                         span.name #{testimonial.name}
                                         span.job #{testimonial.job}
                 // End testimonials section
                 // Start pricing-table section
-                section.pricing-table
-                    .container.heading-titles.text-center
+                section.pricing
+                    .container.heading-titles
                         h2 Pricing Table
                         h3 Not any hidden charges, choose your plan
                         h4 We Have Different Pricing Types To Choose
-                        .lg-flex.clearfix.align-items-center
+                        .pricing-container.lg-flex
                             -
                                 var prices = [{
                                 price: '49',
@@ -189,7 +189,7 @@ html(lang="en")
                                 ]
                             each price in prices
                                 .price-table.col-lg-4(class=price.class)
-                                    span.price.relative #{price.price}
+                                    span.price #{price.price}
                                     span #{price.package}
                                     span.title #{price.title}
                                     .features
@@ -199,31 +199,34 @@ html(lang="en")
 
                 // End pricing-table section
                 // Start latest-articles section
-                section.latest-articles.relative
-                    .circle-image.absolute
-                    .container.heading-titles.clearfix
-                        .text.float-left
+                section.latest-articles
+                    .circle-image
+                    .container.heading-titles
+                        .text
                             h2.title Latest Articles
                             h3 Check what#[br] happening inside
-                        .btn.float-right.text-center
+                        .btn
                             a.view-more(href='#') View More Works.
                     .container
                         .articles.md-flex
                             -
                                 var articles = [{
                                 img: 'article-1-720x500.jpg',
+                                imgalt: 'Cover Letter',
                                 title:'Six Cover Letter Greetings for Every Situation',
                                 info:'By Wolf Richter, a San Francisco based executive, entrepreneur, start up specialist, …',
                                 author: 'Albert Kerri',
                                 time: '10 months ago'
                                 }, {
                                 img: 'article-2-720x500.jpg',
+                                imgalt: 'Google Analytics',
                                 title:'How to Set Up Google Analytics for WordPress',
                                 info:'By Wolf Richter, a San Francisco based executive, entrepreneur, start up specialist, …',
                                 author: 'Albert Kerri',
                                 time: '10 months ago'
                                 }, {
                                 img: 'article-4-720x500.jpg',
+                                imgalt: 'Local SEO',
                                 title:'A Comprehensive Guide to Local SEO in 2018',
                                 info:'By Wolf Richter, a San Francisco based executive, entrepreneur, start up specialist, …',
                                 author: 'Albert Kerri',
@@ -233,14 +236,14 @@ html(lang="en")
                             each article in articles
                                 .article
                                     a.imglink(href='#')
-                                        img.responsive(src="img/"+article.img alt=article.title)
+                                        img(src="img/"+article.img alt=article.imgalt)
                                     .content
                                         h2.title #[a(href='#') #{article.title}]
                                         p.info #{article.info}
                                         span by #[a.author(href='#') #{article.author}] #{article.time}
                 // End latest-articles section
                 // Start lets-talk section
-                section.lets-talk.text-center
+                section.lets-talk
                     .container
                       h2 Interested? Please share your idea.
                       a(href='#') Let's Talk

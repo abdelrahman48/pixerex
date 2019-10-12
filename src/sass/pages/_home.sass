@@ -1,3 +1,4 @@
+// add overlay when mobile menu opened
 .overlay
   display: none
   position: fixed
@@ -64,6 +65,7 @@
 // Start our-services section
 .our-services
   padding: 12px 0
+  text-align: center
   h2
     font-family: "caros-webfont", sans-serif
     font-size: 16px
@@ -82,6 +84,7 @@
       margin-bottom: 10px
   .services
     padding: 26px 0
+    text-align: left
     .service
       background-color: #ffffff
       border-radius: 5px
@@ -101,6 +104,7 @@
           background-color: #ff6d34
           color: #fff
       .circle
+        position: relative
         width: 100px
         height: 100px
         border-radius: 50%
@@ -153,7 +157,10 @@
 // Start about-us section
 .about-us
   padding: 150px 0 140px
+  .container
+    align-items: center
   .image
+    position: relative
     margin: 0 40px 0 80px
     flex-shrink: 2
     @include maxLarge
@@ -164,6 +171,7 @@
     @include maxSmall
       margin: 0 10px 30px 30px
     .square
+      position: absolute
       font-family: "caros-webfont", sans-serif
       font-size: 14px
       background-color: $orangeColor
@@ -181,6 +189,7 @@
       @include maxSmall
         padding: 50px 20px
     img
+      max-width: 100%
       border-radius: 10px
       box-shadow: 0 15px 20px 0 rgba(130,136,147,0.15)
       @include maxLarge
@@ -212,15 +221,19 @@
     margin-bottom: 59px
     .data
       margin-bottom: 4px
+      overflow: hidden
       span
         font-family: "caros-webfont", sans-serif
         font-size: 13px
         font-weight: 600
         color: $primaryColor
+      .number
+        float: right
     .progressbar
       background-color: #eee
       border-radius: 6px
       height: 8px
+      position: relative
       span
         background-color: $orangeColor
         border-radius: 6px
@@ -228,6 +241,7 @@
         height: 8px
         top: 0
         left: 0
+        position: absolute
       [data-progress="50"]
         width: 50%
       [data-progress="90"]
@@ -239,6 +253,8 @@
     span
       display: block
     .info
+      flex: 1
+      text-align: center
       @include maxMedium
         margin-bottom: 20px
       .number
@@ -258,7 +274,9 @@
 // End about-us section
 // Start recent-works section
 .recent-works
+  position: relative
   .circle-image
+    position: absolute
     top: -2em
     right: -25em
     height: 55em
@@ -269,11 +287,17 @@
     z-index: -999
     @include maxMedium
       display: none
+  .container
+    overflow: hidden
   h2
     margin-bottom: 20px
   h3
     @include maxMedium
       margin-bottom: 20px
+  .text
+    float: left
+  .btn
+    float: right
   .text, .btn
     @include maxMedium
       float: none
@@ -318,6 +342,8 @@
   @include maxMedium
     background-position: 70%
     padding: 80px 0
+  .container
+    text-align: center
   h2
     font-family: "caros-webfont", sans-serif
     font-size: 16px
@@ -352,6 +378,7 @@
       margin: 0 20px 0 26px
       display: inline-block
     .info
+      position: relative
       display: inline-block
       top: -15px
       span
@@ -382,7 +409,9 @@
 
 // End testimonials section
 // Start pricing-table section
-.pricing-table
+.pricing
+  .container
+    text-align: center
   h2
     font-family: "caros-webfont", sans-serif
     font-size: 16px
@@ -402,6 +431,8 @@
     margin-bottom: 75px
     @include maxMedium
       margin-bottom: 40px
+  .pricing-container
+    align-items: center
   .price-table
     border-radius: 5px
     box-shadow: 0 5px 15px 0 rgba(130,136,147,0.1)
@@ -417,6 +448,7 @@
       letter-spacing: -3px
       color: $primaryColor
       display: inline-block
+      position: relative
       &:before
         content: '$'
         position: absolute
@@ -473,9 +505,11 @@
 // Start latest-articles section
 .latest-articles
   padding: 112px 0
+  position: relative
   @include maxLarge
     padding: 50px 0
   .circle-image
+    position: absolute
     opacity: 0.15
     top: 2em
     left: -19em
@@ -488,12 +522,20 @@
       left: -70%
     @include maxMedium
       display: none
+  .container
+    overflow: hidden
   .title
     margin-bottom: 20px
   h3
     margin-bottom: 60px
     @include maxMedium
       margin-bottom: 20px
+  .text
+    float: left
+  .btn
+    float: right
+    @include maxMedium
+      text-align: center
   .text, .btn
     @include maxMedium
       float: none
@@ -521,6 +563,8 @@
       .imglink
         display: inline-block
         margin-bottom: 35px
+      img
+        max-width: 100%
       .content
         padding: 0 42px 40px
         @include maxLarge
@@ -565,6 +609,7 @@
 // End latest-articles section
 // Start lets-talk section
 .lets-talk
+  text-align: center
   padding: 100px 0
   @include maxLarge
     padding: 50px 0

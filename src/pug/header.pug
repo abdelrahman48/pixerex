@@ -2,7 +2,7 @@ header
     nav
         .container
             .logo.col-2
-                a(href="home.html") Nanum
+                a(href="#") Nanum
             .menu-toggle
                 span
             .navigation.hide.col-5
@@ -20,9 +20,9 @@ header
                         if nav.elem
                             li(class=nav.class)
                                 #{nav.elem}(class='close')
-                                a(href=nav.name.toLowerCase() + '.html') #{nav.name}
+                                a(href="#") #{nav.name}
                         else
-                            li(class=nav.class): a(href=nav.name.toLowerCase() + '.html') #{nav.name}
+                            li(class=nav.class): a(href="#") #{nav.name}
 
             .contact.hide.col-5
                 span Call us #[span.number +880.734.039]

@@ -2,12 +2,12 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
 @font-face {
   font-family: caros-bold;
-  src: url(http://nanum.pixerex.com/wp-content/uploads/sites/12/2018/10/caros_bold-webfont.woff2) format("woff2"), url(http://nanum.pixerex.com/wp-content/uploads/sites/12/2018/10/caros_bold-webfont.woff) format("woff");
+  src: url(../webfonts/caros_bold-webfont.woff) format("woff");
 }
 
 @font-face {
   font-family: caros-webfont;
-  src: url(http://nanum.pixerex.com/wp-content/uploads/sites/12/2018/10/caros-webfont.woff2) format("woff2"), url(http://nanum.pixerex.com/wp-content/uploads/sites/12/2018/10/caros-webfont.woff) format("woff");
+  src: url(../webfonts/caros-webfont.woff) format("woff");
 }
 
 * {
@@ -284,6 +284,7 @@ header.mobile nav .menu-toggle span:after {
 
 footer {
   padding: 100px 0 80px;
+  position: relative;
 }
 
 footer h2 {
@@ -519,6 +520,7 @@ footer .svg svg path {
 
 .our-services {
   padding: 12px 0;
+  text-align: center;
 }
 
 .our-services h2 {
@@ -547,6 +549,7 @@ footer .svg svg path {
 
 .our-services .services {
   padding: 26px 0;
+  text-align: left;
 }
 
 .our-services .services .service {
@@ -580,6 +583,7 @@ footer .svg svg path {
 }
 
 .our-services .services .service .circle {
+  position: relative;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -659,7 +663,14 @@ footer .svg svg path {
   padding: 150px 0 140px;
 }
 
+.about-us .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .about-us .image {
+  position: relative;
   margin: 0 40px 0 80px;
   -ms-flex-negative: 2;
       flex-shrink: 2;
@@ -686,6 +697,7 @@ footer .svg svg path {
 }
 
 .about-us .image .square {
+  position: absolute;
   font-family: "caros-webfont", sans-serif;
   font-size: 14px;
   background-color: #ff6d34;
@@ -717,6 +729,7 @@ footer .svg svg path {
 }
 
 .about-us .image img {
+  max-width: 100%;
   border-radius: 10px;
   -webkit-box-shadow: 0 15px 20px 0 rgba(130, 136, 147, 0.15);
           box-shadow: 0 15px 20px 0 rgba(130, 136, 147, 0.15);
@@ -767,6 +780,7 @@ footer .svg svg path {
 
 .about-us .progress .data {
   margin-bottom: 4px;
+  overflow: hidden;
 }
 
 .about-us .progress .data span {
@@ -776,10 +790,15 @@ footer .svg svg path {
   color: #283a5e;
 }
 
+.about-us .progress .data .number {
+  float: right;
+}
+
 .about-us .progress .progressbar {
   background-color: #eee;
   border-radius: 6px;
   height: 8px;
+  position: relative;
 }
 
 .about-us .progress .progressbar span {
@@ -789,6 +808,7 @@ footer .svg svg path {
   height: 8px;
   top: 0;
   left: 0;
+  position: absolute;
 }
 
 .about-us .progress .progressbar [data-progress="50"] {
@@ -809,6 +829,13 @@ footer .svg svg path {
 
 .about-us .counter span {
   display: block;
+}
+
+.about-us .counter .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
@@ -843,7 +870,12 @@ footer .svg svg path {
   }
 }
 
+.recent-works {
+  position: relative;
+}
+
 .recent-works .circle-image {
+  position: absolute;
   top: -2em;
   right: -25em;
   height: 55em;
@@ -860,6 +892,10 @@ footer .svg svg path {
   }
 }
 
+.recent-works .container {
+  overflow: hidden;
+}
+
 .recent-works h2 {
   margin-bottom: 20px;
 }
@@ -868,6 +904,14 @@ footer .svg svg path {
   .recent-works h3 {
     margin-bottom: 20px;
   }
+}
+
+.recent-works .text {
+  float: left;
+}
+
+.recent-works .btn {
+  float: right;
 }
 
 @media (max-width: 767px) {
@@ -948,6 +992,10 @@ footer .svg svg path {
   }
 }
 
+.testimonials .container {
+  text-align: center;
+}
+
 .testimonials h2 {
   font-family: "caros-webfont", sans-serif;
   font-size: 16px;
@@ -1004,6 +1052,7 @@ footer .svg svg path {
 }
 
 .testimonials .testimonial .info {
+  position: relative;
   display: inline-block;
   top: -15px;
 }
@@ -1044,7 +1093,11 @@ footer .svg svg path {
   color: #ff6d34;
 }
 
-.pricing-table h2 {
+.pricing .container {
+  text-align: center;
+}
+
+.pricing h2 {
   font-family: "caros-webfont", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1052,14 +1105,14 @@ footer .svg svg path {
   margin-bottom: 16px;
 }
 
-.pricing-table h3 {
+.pricing h3 {
   font-family: "caros-bold", sans-serif;
   font-size: 36px;
   color: #283a5e;
   margin-bottom: 50px;
 }
 
-.pricing-table h4 {
+.pricing h4 {
   font-family: "caros-webfont", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1068,12 +1121,18 @@ footer .svg svg path {
 }
 
 @media (max-width: 767px) {
-  .pricing-table h4 {
+  .pricing h4 {
     margin-bottom: 40px;
   }
 }
 
-.pricing-table .price-table {
+.pricing .pricing-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pricing .price-table {
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 15px 0 rgba(130, 136, 147, 0.1);
           box-shadow: 0 5px 15px 0 rgba(130, 136, 147, 0.1);
@@ -1081,7 +1140,7 @@ footer .svg svg path {
 }
 
 @media (max-width: 991px) {
-  .pricing-table .price-table {
+  .pricing .price-table {
     margin-bottom: 35px;
     max-width: 600px;
     margin-right: auto;
@@ -1089,15 +1148,16 @@ footer .svg svg path {
   }
 }
 
-.pricing-table .price-table .price {
+.pricing .price-table .price {
   font-family: "caros-bold", sans-serif;
   font-size: 80px;
   letter-spacing: -3px;
   color: #283a5e;
   display: inline-block;
+  position: relative;
 }
 
-.pricing-table .price-table .price:before {
+.pricing .price-table .price:before {
   content: '$';
   position: absolute;
   left: -12px;
@@ -1107,25 +1167,25 @@ footer .svg svg path {
   font-size: 23px;
 }
 
-.pricing-table .price-table .title {
+.pricing .price-table .title {
   font-family: "caros-bold", sans-serif;
   font-size: 28px;
   color: #283a5e;
   margin: 5px 0 34px;
 }
 
-.pricing-table .price-table span {
+.pricing .price-table span {
   font-family: "caros-webfont", sans-serif;
   font-size: 13px;
   display: block;
   color: #828893;
 }
 
-.pricing-table .price-table .features span {
+.pricing .price-table .features span {
   margin-bottom: 15px;
 }
 
-.pricing-table .price-table a {
+.pricing .price-table a {
   color: #828893;
   font-family: "caros-webfont", sans-serif;
   font-size: 16px;
@@ -1143,33 +1203,34 @@ footer .svg svg path {
   transition: all .3s ease-in-out;
 }
 
-.pricing-table .price-table a:hover {
+.pricing .price-table a:hover {
   color: #fff;
   background-color: #828893;
 }
 
-.pricing-table .price-table.special {
+.pricing .price-table.special {
   border-radius: 10px;
   -webkit-box-shadow: 0 28px 50px 0 rgba(130, 136, 147, 0.15);
           box-shadow: 0 28px 50px 0 rgba(130, 136, 147, 0.15);
 }
 
-.pricing-table .price-table.special .price, .pricing-table .price-table.special .title {
+.pricing .price-table.special .price, .pricing .price-table.special .title {
   color: #ff6d34;
 }
 
-.pricing-table .price-table.special a {
+.pricing .price-table.special a {
   color: #ff6d34;
   background-color: #ffeee4;
 }
 
-.pricing-table .price-table.special a:hover {
+.pricing .price-table.special a:hover {
   color: #fff;
   background-color: #ff6d34;
 }
 
 .latest-articles {
   padding: 112px 0;
+  position: relative;
 }
 
 @media (max-width: 991px) {
@@ -1179,6 +1240,7 @@ footer .svg svg path {
 }
 
 .latest-articles .circle-image {
+  position: absolute;
   opacity: 0.15;
   top: 2em;
   left: -19em;
@@ -1201,6 +1263,10 @@ footer .svg svg path {
   }
 }
 
+.latest-articles .container {
+  overflow: hidden;
+}
+
 .latest-articles .title {
   margin-bottom: 20px;
 }
@@ -1212,6 +1278,20 @@ footer .svg svg path {
 @media (max-width: 767px) {
   .latest-articles h3 {
     margin-bottom: 20px;
+  }
+}
+
+.latest-articles .text {
+  float: left;
+}
+
+.latest-articles .btn {
+  float: right;
+}
+
+@media (max-width: 767px) {
+  .latest-articles .btn {
+    text-align: center;
   }
 }
 
@@ -1270,6 +1350,10 @@ footer .svg svg path {
 .latest-articles .articles .article .imglink {
   display: inline-block;
   margin-bottom: 35px;
+}
+
+.latest-articles .articles .article img {
+  max-width: 100%;
 }
 
 .latest-articles .articles .article .content {
@@ -1341,6 +1425,7 @@ footer .svg svg path {
 }
 
 .lets-talk {
+  text-align: center;
   padding: 100px 0;
   background-image: url("../img/Map.png");
   background-position: center center;
@@ -1842,69 +1927,6 @@ footer .svg svg path {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-.flex-one {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.align-items-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.clearfix:after {
-  content: ".";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.float-right {
-  float: right;
-}
-
-.float-left {
-  float: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.middle {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-img.responsive {
-  max-width: 100%;
 }
 
 .heading-titles h2 {
