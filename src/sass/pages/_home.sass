@@ -1,5 +1,5 @@
 .window-size
-  position: absolute
+  position: fixed
   top: 10px
   right: 10px
   color: red
@@ -97,6 +97,7 @@
       box-shadow: 0 5px 15px 0 rgba(130,136,147,0.1)
       padding: 60px 40px
       margin: 0 15px
+      flex: 1
       @include maxMedium
         margin-bottom: 30px
       &:hover
@@ -165,6 +166,8 @@
   padding: 150px 0 140px
   .container
     align-items: center
+  .image, .content
+    flex: 1
   .image
     position: relative
     margin: 0 40px 0 80px
@@ -528,7 +531,7 @@
       left: -70%
     @include maxMedium
       display: none
-  .container
+  .container.heading-titles
     overflow: hidden
   .title
     margin-bottom: 20px
@@ -557,6 +560,7 @@
       margin: 0 15px
       background-color: #fff
       box-shadow: 0 5px 15px 0 rgba(130,136,147,0.15)
+      flex: 1
       @include maxLarge
         max-width: calc(50% - 30px)
         margin-bottom: 30px
@@ -570,7 +574,7 @@
         display: inline-block
         margin-bottom: 35px
       img
-        max-width: 100%
+        width: 100%
       .content
         padding: 0 42px 40px
         @include maxLarge

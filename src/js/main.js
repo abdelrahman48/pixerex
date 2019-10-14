@@ -42,11 +42,11 @@ $(function() {
     });
 
     // show window size on IE
-    // var x = document.querySelector('.window-size');
-    // x.textContent = window.innerWidth;
-    // window.onresize = function () {
-    //     x.textContent = window.innerWidth
-    // };
+    var x = document.querySelector('.window-size');
+    x.textContent = window.innerWidth;
+    window.onresize = function () {
+        x.textContent = window.innerWidth
+    };
 
     // lazy load images
     function lazyLoad() {

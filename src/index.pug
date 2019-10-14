@@ -3,7 +3,7 @@ doctype
 html(lang="en")
     include pug/head
     body
-        //span.window-size 0
+        span.window-size 0
         .overlay
         // Start Header
         include pug/header
@@ -60,7 +60,7 @@ html(lang="en")
                             p We provide marketing services to startups and small businesses to looking for a partner of their digital media.
 
                             .progress
-                                .data.clearfix
+                                .data
                                     span SEO
                                     span.number 50%
                                 .progressbar
@@ -68,13 +68,13 @@ html(lang="en")
                             .progress
                                 .data
                                     span MARKETING
-                                    span 90%
+                                    span.number 90%
                                 .progressbar
                                     span(data-progress="90")
                             .progress
                                 .data
                                     span DESIGN
-                                    span 70%
+                                    span.number 70%
                                 .progressbar
                                     span(data-progress="70")
                     .container.counter.md-flex

@@ -22,3 +22,6 @@
 @mixin minXlarge
   @media (min-width: 1200px)
     @content
+@mixin ie-11($selector)
+  _:-ms-fullscreen, :root #{$selector}
+    @content
